@@ -1,0 +1,9 @@
+.stars span{
+    font-size: 1.4rem;
+    color:  var(--light-color);
+}
+
+.content h3, .content p{
+    width: 100%;
+    text-align: start;
+}

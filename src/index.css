@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:wght@200;300;400;600;700&display=swap');
+:root{
+    --green: #27ae60;
+    --white: #fff;
+    --black: #192a56;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+	--hue: 223;
+	--bg: hsl(var(--hue),90%,95%);
+	--fg: hsl(var(--hue),90%,5%);
+}
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+    font: 1em sans-serif;
+}
+
+
+
+html{
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    position: relative;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+
+section:last-child{
+    background: #eee;
+}
+
+.sub-heading{
+    text-align: center;
+    color: var(--green);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+h1{
+    text-align: center;
+    color: var(--black);
+    padding-top: 1rem;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+p{
+    color: var(--light-color);
+    font-size: 1.6rem;
+    padding: 0.5rem 0;
+    line-height: 2
+}
+
+.main{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    height: 90vh;
+    position: absolute;
+    top: 6.5rem;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    color: var(--white);
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+
+}  
+
+.btn:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+
+#close{
+    position: absolute;
+    color: var(--white);
+    cursor: pointer;
+    top: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#close:hover{
+    background: var(--green);
+}
+
+.btn-top{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    cursor: pointer;
+    bottom: 10px;
+    right: 20px;
+    border: none;
+    outline: none;
+    border: 1px solid var(--black);
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-top:hover{
+    background-color: var(--green);
+}
+
+@media screen and (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    
+    header{
+        padding: 1rem 2rem;
+    }
+
+    .dish img{
+        height: auto;
+        width: 100%;
+    }
+
+    form .inputBox .input{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #search-form #search-box{
+        width: 90%;
+        margin: 0 1rem;
+    }
+    
+    .slide .content h3{
+        color: var(--black);
+        font-size: 5rem;
+    }
+
+    .single .wrapper{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .single .wrapper .image{
+        height: 40%;
+    }
+
+    .single .wrapper{
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width: 605px){
+
+
+    .sidebar a{
+        width: 95%;
+        font-size: 1.7rem;
+        padding: .5rem 1.5rem;
+        margin: 2px 5px;
+        padding: 1rem;
+    }
+    
+    .sidebar{
+        position: fixed;
+        display: none;
+    }
+
+    header .btn{
+        display: none;
+    }
+    
+    .icons #bars{
+        display: block;
+    }
+
+    .sidebar.active{
+        display: flex;
+    }
+    
+}
+
+@media screen and (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+    
+    .dish img{
+        height: auto;
+        width: 100%;
+    }
+
+    form .inputBox .input{
+        width: 100%;
+    }
+
+    .single .wrapper .image{
+        height: 35%;
+    }
+
+    .flyer{
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+    
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+  }
+  
+  
+  ::-webkit-scrollbar-track{
+    background: var(--green);
+    border-radius: 50px;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb{
+    background: var(--black);
+    border-radius: 50px;
+  }
+  
+
+
+section{
+    margin: .5rem 0;
+    padding: .5rem 1%;
+}
+
+.page{
+    flex: 3;
+    width: 100%;
+    position: relative;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+}
+
+.dishes .container{
+    gap: .5rem;
+}
+
+
+.card{
+    background: var(--white);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+.slider{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: fit-content;
+    padding: 0 5px;
+}
+
+.arrow{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.7rem;
+    background: rgba(0, 0, 0, .2);
+    
+}
+
+
+.arrow:first-of-type{
+    left: 3px;
+}
+
+.arrow:hover{
+    background: #eee;
+}
+
+.arrow:last-of-type{
+    right: 3px;
+}
+
+
+.slider .slide-wrapper{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .6s ease-out all;
+}

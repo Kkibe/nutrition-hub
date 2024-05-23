@@ -1,0 +1,38 @@
+.cart{
+    position: fixed;
+    /*top: -110%;*/
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .8);
+    padding: 2rem 2rem;
+}
+
+
+table{
+    width: 100%;
+    min-height: 100%;
+    background: var(--white);
+}
+
+
+
+
+table th:nth-child(even){
+    background: #eee;
+}
+
+.cart .cart-item{
+    position: relative;
+}
+
+.cart .btn{
+    border-radius: 5rem;
+}
+
+.cart .wrapper .image-container{
+    width: 50px;
+    height: 50px;
+}
+

@@ -1,0 +1,47 @@
+.faq {
+    background-color: transparent;
+    border: 1px solid var(--light-color);
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem 0;
+    transition: 0.3s ease;
+}
+
+.faq div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faq div h3{
+    margin: 0 35px 0 0;
+    font-size: 1.5rem;
+}
+
+.faq p{
+    display: none;
+    margin: 30px 0 0;
+}
+
+.faq.active {
+    background-color: var(--white);
+    box-shadow: 0 3px 6px var(--box-shadow);
+}
+
+.faq.active::before, .faq.active::after{
+    color: #2ecc71;
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+
+.faq.active p{
+    display: block;
+}

@@ -1,0 +1,130 @@
+.cooking .container{
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+}
+
+.card{
+    overflow-x: auto;
+}
+
+
+.card .image{
+    height: 25rem;
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.card .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: fill;
+}
+
+.card .image .button{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    z-index: 5;
+    color: var(--green);
+    cursor: pointer;
+
+}
+
+.card .image .icon{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
+    font-size: 2rem;
+    background: var(--white);
+    border-radius: 50%;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card .image .icon:hover{
+    background: var(--green);
+    color: var(--white);
+}
+
+.card .content{
+    padding: 2rem;
+    padding-top: 0;
+}
+
+
+
+.card .content .stars{
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+
+.card .content .stars .star{
+    color: var(--green);
+}
+.card .content .stars .duration{
+    padding: 4px 8px;
+    border-radius: 30px;
+    background: var(--light-color);
+    color: var(--white);
+    position: absolute;
+    right: 5px;
+    font-size: 1.2rem;
+}
+
+.card .content h3{
+    color: var(--black);
+    font-size: 2.5rem;
+    cursor: pointer;
+} 
+
+.card .content h3:hover{
+    text-decoration: underline;
+}
+
+.card .content p{
+    color: var(--light-color);
+    font-size: 1.6rem;
+    padding: 0.5rem 0;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.hash{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 6px;
+    margin: 5px 5px;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+
+.hash:hover{
+    background: var(--light-color);
+    color: var(--white);
+}
+
+.card .content .views{
+    color: var(--green);
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
